@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+body {
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    position: relative; /*Pq section de telefone tem que ficar no meio*/
+    height: 100vh;
+}
+
+section#telefone {
+    position: absolute; /*Pq ela tem que ficar no meio*/
+    top: 50%; /*Só pode ser configurado por causa do 'postion: absolute;'*/
+    left: 50%; /*Só pode ser configurado por causa do 'postion: absolute;'*/
+    transform: translate(-50%, -50%); /*Menos metade pra esquerda, menos metade pra cima*/
+    width: 311px;
+    height: 627px;
+    background: url('../imagens/frame-iphone.png') no-repeat; /*Perceba que é um shorthand*/
+    
+}
+
+iframe#tela {
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 269px;
+    height: 471px;
+}
+
+section#rede-social { /*Colocar eles a direita*/
+    text-align: right;
+}
+
+section#rede-social img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.205);
+    box-sizing: border-box; /*A borda agora faz parte da caixa e os outros botões não vai mexer.*/
+    }
+
+section#rede-social img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.637);
+    transform: translate(-10px, -10px); /*Vai fazer o botão puxar pra esquerda*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.286);
+    transition: transform 0.3s, border 1s; /*Tá configurando 2 coisas*/
+}
